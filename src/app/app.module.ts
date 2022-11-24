@@ -10,6 +10,7 @@ import { DeleteEmployComponent } from './delete-employ/delete-employ.component';
 import { EditEmployComponent } from './edit-employ/edit-employ.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ViewEmployComponent } from './view-employ/view-employ.component';
 
 const myRoute:Routes=[
   {
@@ -31,6 +32,10 @@ const myRoute:Routes=[
   {
     path:"add",
     component:AddEmployComponent
+  },
+  {
+    path:"view",
+    component:ViewEmployComponent
   }
 
 ]
@@ -42,12 +47,13 @@ const myRoute:Routes=[
     SearchEmployComponent,
     DeleteEmployComponent,
     EditEmployComponent,
-    NavbarComponent
+    NavbarComponent,
+    ViewEmployComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
