@@ -6,40 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-employ.component.css']
 })
 export class ViewEmployComponent {
-  data:any =[
-    {
-    "name":"anju",
-    "designation":"software Engineer",
-    "salary":55000,
-    "company":"Nest"
-  },
-  {
-    "name":"amru",
-    "designation":"software Engineer",
-    "salary":55000,
-    "company":"Nest"
-
-  },
-  {
-    "name":"Sherin",
-    "designation":"software Engineer",
-    "salary":55000,
-    "company":"Nest"
-
-  },
-  {
-    "name":"Hasna",
-    "designation":"software Engineer",
-    "salary":55000,
-    "company":"Nest"
-
-  },
-  {
-    "name":"Swity",
-    "designation":"software Engineer",
-    "salary":55000,
-    "company":"Nest"
-
-  }
-  
-]}
+  data:any =[]
+}
