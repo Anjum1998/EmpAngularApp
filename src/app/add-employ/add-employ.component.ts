@@ -34,6 +34,14 @@ export class AddEmployComponent {
         console.log(response)
         if (response.status=="success") {
           alert("employee added successfully")
+          this.company=""
+          this.designation=""
+          this.empCode=""
+          this.empName=""
+          this.mobile=""
+          this.password=""
+          this.salary=""
+          this.username=""
         } else {
           alert("something went wrong")
         }
