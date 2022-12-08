@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ApiService } from '../api.service';
 export class SearchEmployComponent {
   empCode=""
   
-constructor(private api:ApiService){}
+constructor(private api:ApiService, private route:Router){}
 searchData:any=[]
   readValue=()=>
   {
@@ -23,6 +24,23 @@ searchData:any=[]
           alert("Invalid emp code")
         } else {
           this.searchData=response;
+        }
+      }
+    )
+  }
+
+  deleteBtnClick=(id:any)=>
+  {
+    let data:any={"id":id}
+    this.api.deleteEmploy(data).subscribe(
+      (response:any)=>
+      {
+        console.log(response)
+        if (response.status=="success") {
+          alert("employ deleted successfully")
+          this.route.navigate(['/search'])
+        } else {
+          alert("can not delete")
         }
       }
     )
